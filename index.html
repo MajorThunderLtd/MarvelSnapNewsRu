@@ -3,23 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Новости</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Новости Marvel Snap</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      padding: 1rem;
+      background: #1a1a1a;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .news-list {
+      padding: 1rem;
+    }
+    .news-item {
+      margin-bottom: 1rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: #222;
+      border-radius: 8px;
+    }
+    .news-item:hover {
+      background: #333;
+    }
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Новости</h1>
-  </header>
+  <header>Новости Marvel Snap</header>
 
-  <div class="container">
-    <div class="sidebar" id="newsList">
-      <!-- Сюда подгрузятся статьи -->
+  <div class="news-list">
+    <div class="news-item" onclick="loadArticle('https://telegra.ph/Primer-1-04-08')">
+      📰 Пример новости 1
     </div>
-    <div class="content">
-      <iframe id="viewer" src=""></iframe>
+    <div class="news-item" onclick="loadArticle('https://telegra.ph/Primer-2-04-08')">
+      📰 Пример новости 2
     </div>
+    <!-- Добавляй ещё новости вот так:
+    <div class="news-item" onclick="loadArticle('ССЫЛКА')">ТЕКСТ</div>
+    -->
   </div>
 
-  <script src="script.js"></script>
+  <iframe id="articleViewer" src=""></iframe>
+
+  <script>
+    function loadArticle(url) {
+      document.getElementById('articleViewer').src = url;
+    }
+  </script>
 </body>
 </html>
