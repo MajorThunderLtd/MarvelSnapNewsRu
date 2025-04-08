@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 300px;
+  background: #f2f2f2;
+  overflow-y: auto;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.link {
+  display: block;
+  margin: 10px 0;
+  color: #0066cc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
